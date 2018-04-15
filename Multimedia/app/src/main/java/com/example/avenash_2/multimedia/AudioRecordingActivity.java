@@ -1,0 +1,95 @@
+package com.example.avenash_2.multimedia;
+
+import android.media.MediaPlayer;
+import android.media.MediaRecorder;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Date;
+
+public class AudioRecordingActivity extends AppCompatActivity {
+
+    // 1. Create an object for MeadiaRecorder
+    MediaRecorder recorder;
+    // To display the status of AudioRecording test
+    TextView tv;
+    // To play the recorded the audio from SDCard
+    MediaPlayer mp;
+    String path;
+
+    String currentFilePath;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_audio_recording);
+
+        recorder = new MediaRecorder();
+        //2. Set the audio source MIC for recording
+        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        //3. Set the output format with the extension of amr with the high quality NB (WB-low quality) for audio
+        recorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);
+        //4. Set the Encoder
+        recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        //5. Set recording file path/name
+        createNewAudioFile();
+
+    }
+
+    private void createNewAudioFile(){
+        String currentTime=DateFormat.getDateTimeInstance().format(new Date());
+        currentFilePath=getResources().getString(R.string.audio_storage_path) +
+                getResources().getString(R.string.app_name)+
+                " - "+
+                currentTime+
+                getResources().getString(R.string.audio_file_ext);
+        recorder.setOutputFile(currentFilePath);
+    }
+
+    /**
+     * This method is responsible for start voice recording
+     * @param v
+     */
+    public void onStart(View v){
+        try {
+            recorder.setOutputFile(currentFilePath);
+            recorder.prepare(); // Check all the conditions specified with media recorder
+            tv.setText("Start Recording");
+            recorder.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //This method is responsible for stop on going voice recording
+    public void onStop(View v){
+        tv.setText("Stop Recording");
+        recorder.stop();
+    }
+
+    //This method is responsible for playing recorded audio file
+    public void onStartPlay(View v) {
+        tv.setText("Playing Audio");
+        path = currentFilePath;
+        mp = new MediaPlayer();
+        try {
+            mp.setDataSource(path);
+            mp.prepare();
+            mp.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //This method is responsible for stop playing recorded audio file
+    public void onStopPlay(View v){
+        tv.setText("Audio Stopped");
+        mp.stop();
+        mp.release();
+    }
+}

@@ -23,4 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onVideoView(View view) {
     }
+
+    public void onMediaPlayer(View view) {
+    }
 }
