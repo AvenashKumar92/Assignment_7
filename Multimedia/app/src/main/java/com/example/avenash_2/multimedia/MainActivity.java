@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onVideoRec(View view) {
+        Intent intent=new Intent(this, VideoRecordingActivity.class);
+        startActivity(intent);
     }
 
     public void onAudioRec(View view) {
