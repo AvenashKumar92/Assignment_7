@@ -27,8 +27,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onVideoView(View view) {
+        Intent intent = new Intent(this, VideoViewActivity.class);
+        startActivity(intent);
     }
 
     public void onMediaPlayer(View view) {
+        Intent intent = new Intent(this, MediaPlayerActivity.class);
+        startActivity(intent);
     }
 }
