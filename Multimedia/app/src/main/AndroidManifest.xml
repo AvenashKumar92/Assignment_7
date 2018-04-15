@@ -22,9 +22,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".AudioRecordingActivity" />
+<<<<<<< HEAD
         <activity android:name=".VideoRecordingActivity" />
         <activity android:name=".MediaPlayerActivity" />
         <activity android:name=".VideoViewActivity"></activity>
+=======
+        <activity android:name=".VideoRecordingActivity"></activity>
+        <activity android:name=".camera_gallery.CameraGallery"></activity>
+>>>>>>> 142c58ea12b713ceb45316918489614e2a26caf0
     </application>
 
 </manifest>

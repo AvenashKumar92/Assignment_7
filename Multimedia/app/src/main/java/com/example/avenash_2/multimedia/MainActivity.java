@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.avenash_2.multimedia.camera_gallery.CameraGallery;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCamGallery(View view) {
+        Intent intent=new Intent(this, CameraGallery.class);
+        startActivity(intent);
     }
 
     public void onVideoRec(View view) {
