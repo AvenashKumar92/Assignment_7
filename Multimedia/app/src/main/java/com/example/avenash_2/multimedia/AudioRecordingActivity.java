@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AudioRecordingActivity extends AppCompatActivity {
@@ -55,14 +56,13 @@ public class AudioRecordingActivity extends AppCompatActivity {
 
     private void createNewAudioFile(){
 
-        android.text.format.DateFormat df = new android.text.format.DateFormat();
-        String currentTime= (String) df.format("yyyy-MM-dd hh-mm-ss", new Date());
+        String currentTime= new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         currentFilePath=getResources().getString(R.string.audio_storage_path) +
                 getResources().getString(R.string.app_name)+
                 " - "+
                 currentTime+
                 getResources().getString(R.string.audio_file_ext);
-        currentFilePath="/sdcard/test.amr";
+        //currentFilePath="/sdcard/test.amr";
         recorder.setOutputFile(currentFilePath);
     }
 

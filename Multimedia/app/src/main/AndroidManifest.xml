@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -22,14 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".AudioRecordingActivity" />
-<<<<<<< HEAD
         <activity android:name=".VideoRecordingActivity" />
         <activity android:name=".MediaPlayerActivity" />
-        <activity android:name=".VideoViewActivity"></activity>
-=======
-        <activity android:name=".VideoRecordingActivity"></activity>
-        <activity android:name=".camera_gallery.CameraGallery"></activity>
->>>>>>> 142c58ea12b713ceb45316918489614e2a26caf0
+        <activity android:name=".VideoViewActivity"/>
+        <activity android:name=".camera_gallery.CameraGallery"/>
     </application>
 
 </manifest>
