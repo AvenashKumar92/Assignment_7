@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".AudioRecordingActivity" />
         <activity android:name=".VideoRecordingActivity"></activity>
+        <activity android:name=".camera_gallery.CameraGallery"></activity>
     </application>
 
 </manifest>
