@@ -7,9 +7,18 @@
     android:orientation="vertical"
     tools:context=".AudioRecordingActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvStatus"
+        android:text="Current Status"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btnStart"
         android:onClick="onStart"
         android:text="Start Recording"
         android:layout_gravity="center"/>
@@ -17,22 +26,28 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btnStop"
         android:onClick="onStop"
         android:text="Stop Recording"
+        android:enabled="false"
         android:layout_gravity="center"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btnStartPlay"
         android:onClick="onStartPlay"
+        android:enabled="false"
         android:text="Start Play"
         android:layout_gravity="center"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btnStopPlay"
         android:onClick="onStopPlay"
         android:text="Stop Play"
+        android:enabled="false"
         android:layout_gravity="center"/>
 
 </LinearLayout>
