@@ -8,30 +8,25 @@
 
 
 
-    <Button
-        android:layout_width="wrap_content"
+    <ToggleButton
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Start"
-        android:id="@+id/btnStartVRec"
+        android:id="@+id/toggleRecordingButton"
+        android:textOff="Start Recording"
+        android:textOn="Stop Recording"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:onClick="onStart"/>
+        />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stop"
-        android:id="@+id/btnStopVRec"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:onClick="onStop"/>
+
 
 
     <SurfaceView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/svVideoRec"
-        android:layout_above="@id/btnStartVRec"
+        android:layout_above="@id/toggleRecordingButton"
         />
 
 </RelativeLayout>

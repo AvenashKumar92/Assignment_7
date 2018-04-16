@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Multimedia</string>
     <string name="audio_storage_path">/sdcard/</string>
-    <string name="audio_file_prefix_name">test</string>
+    <string name="audio_file_prefix_name">audio</string>
     <string name="audio_file_ext">.amr</string>
+
+    <string name="video_storage_path">/mnt/sdcard/</string>
+    <string name="video_file_prefix_name">video</string>
+    <string name="video_file_ext">.mp4</string>
 </resources>

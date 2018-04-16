@@ -58,7 +58,7 @@ public class AudioRecordingActivity extends AppCompatActivity {
 
         String currentTime= new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         currentFilePath=getResources().getString(R.string.audio_storage_path) +
-                getResources().getString(R.string.app_name)+
+                getResources().getString(R.string.audio_file_prefix_name)+
                 " - "+
                 currentTime+
                 getResources().getString(R.string.audio_file_ext);
