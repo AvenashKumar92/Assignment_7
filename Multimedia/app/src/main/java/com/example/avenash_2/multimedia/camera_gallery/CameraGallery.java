@@ -15,6 +15,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -23,7 +24,7 @@ import android.widget.ImageView;
 import com.example.avenash_2.multimedia.R;
 
 
-public class CameraGallery extends Activity {
+public class CameraGallery extends AppCompatActivity {
 
 	private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
 	private Button btnSelect;
@@ -42,7 +43,7 @@ public class CameraGallery extends Activity {
 				selectImage();
 			}
 		});
-		ivImage = (ImageView) findViewById(R.id.ivImage);
+		ivImage = (ImageView) findViewById(R.id.ivDisplayImage);
 	}
 
 	@Override

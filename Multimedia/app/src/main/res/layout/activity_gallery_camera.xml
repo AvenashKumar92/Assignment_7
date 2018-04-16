@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:gravity="center"
         android:padding="5dp" >
 
@@ -19,18 +20,14 @@
             android:text="Select Photo" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="10dp" >
+
 
         <ImageView
-            android:id="@+id/ivImage"
+            android:id="@+id/ivDisplayImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher_foreground" />
-    </LinearLayout>
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_background" />
+
 
 </LinearLayout>
